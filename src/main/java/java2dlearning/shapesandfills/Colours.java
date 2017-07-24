@@ -1,4 +1,4 @@
-package java2dlearning;
+package java2dlearning.shapesandfills;
 
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -8,7 +8,7 @@ import java.awt.Graphics2D;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-class Surface extends JPanel {
+class ColoursSurface extends JPanel {
 	public void doDrawing(Graphics g) {
 		Graphics2D g2d = (Graphics2D) g;
 		
@@ -53,7 +53,7 @@ public class Colours extends JFrame {
 	}
 	
 	private void initUI() {
-		add(new Surface());
+		add(new ColoursSurface());
 		
 		setTitle("Colours");
 		setSize(360, 300);
