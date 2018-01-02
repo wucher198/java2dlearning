@@ -42,8 +42,6 @@ public class Composition extends Java2DPanel {
         frame.add(new Composition());
         frame.setTitle("Composition");
         frame.setSize(400,120);
-        frame.setLocationRelativeTo(null);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Java2DFrame.show(frame);
     }
 }

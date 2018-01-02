@@ -18,7 +18,7 @@ public class Cliping extends Java2DPanel implements ActionListener {
     private int posX = 8;
     private int posY = 8;
     private final int RADIUS = 90;
-    private final int DELAY = 35;
+    private final int DELAY = 20;
 
     public Cliping() {
         loadImage();

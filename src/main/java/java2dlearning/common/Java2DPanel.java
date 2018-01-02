@@ -15,6 +15,10 @@ abstract public class Java2DPanel extends JPanel {
 		return (Graphics2D) g;
 	}
 
+	protected void dispose(Graphics2D g2) {
+		g2.dispose();
+	}
+
 	protected void setRenderingHints(Graphics2D g2d) {
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		g2d.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
@@ -23,7 +27,9 @@ abstract public class Java2DPanel extends JPanel {
 	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
+		setDoubleBuffered(true);
 		
 		doDrawing(g);
+		Toolkit.getDefaultToolkit().sync();
 	}
 }
