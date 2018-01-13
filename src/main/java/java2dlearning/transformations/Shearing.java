@@ -18,6 +18,23 @@ public class Shearing extends Java2DPanel {
         g2d.drawRect(0, 0, 160, 50);
 
         AffineTransform tx2 = new AffineTransform();
+        tx2.translate(50, 90);
+        tx2.shear(0, 1);
+
+        g2d.setTransform(tx2);
+        g2d.setPaint(Color.blue);
+
+        g2d.draw(new Rectangle(0, 0, 80, 50));
+
+        AffineTransform tx3 = new AffineTransform();
+        tx3.translate(130, 10);
+        tx3.shear(0, 1);
+
+        g2d.setTransform(tx3);
+        g2d.setPaint(Color.red);
+        g2d.drawRect(0, 0, 80, 50);
+
+        g2d.dispose();
     }
 
     public static void main(String[] args) {

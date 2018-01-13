@@ -12,10 +12,10 @@ public class Rotation extends Java2DPanel {
         Graphics2D g2d = create(g);
 
         g2d.setPaint(new Color(150, 150, 150));
-        g2d.fillRect(20, 20, 80, 50);
-        g2d.translate(180, -50);
-        g2d.rotate(Math.PI / 4);
-        g2d.fillRect(80, 80, 80, 50);
+        g2d.drawRect(20, 20, 80, 50);
+//        g2d.translate(180, -50);
+        g2d.rotate(Math.PI / 16);
+        g2d.drawRect(20, 20, 80, 50);
 
         dispose(g2d);
     }
